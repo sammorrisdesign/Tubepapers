@@ -1,0 +1,71 @@
+@mixin text-fill-color($color) {
+    -webkit-text-fill-color: $color;
+    -moz-text-fill-color: $color;
+    -o-text-fill-color: $color;
+    -ms-text-fill-color: $color;
+    text-fill-color: $color;
+}
+
+@mixin background-clip($value) {
+    -webkit-background-clip: $value;
+    -moz-background-clip: $value;
+    -o-background-clip: $value;
+    -ms-background-clip: $value;
+    background-clip: $value;
+}
+
+@mixin transition($transition-property, $transition-time, $method) {
+    -webkit-transition: $transition-property $transition-time $method;
+    -moz-transition: $transition-property $transition-time $method;
+    -ms-transition: $transition-property $transition-time $method;
+    -o-transition: $transition-property $transition-time $method;
+    transition: $transition-property $transition-time $method;
+}
+
+@mixin animation-delay($duration) {
+    -webkit-animation-delay: $duration;
+    -moz-animation-delay: $duration;
+    -ms-animation-delay: $duration;
+    -o-animation-delay: $duration;
+    animation-delay: $duration;
+}
+
+@mixin animation($animate...) {
+    $max: length($animate);
+    $animations: "";
+
+    @for $i from 1 through $max {
+        $animations: #{$animations + nth($animate, $i)};
+
+        @if $i < $max {
+            $animations: #{$animations + ", "};
+        }
+    }
+    -webkit-animation: $animations;
+    -moz-animation: $animations;
+    -o-animation: $animations;
+    animation: $animations;
+}
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+@mixin background-image-retina($url) {
+    background-image: url($url + ".png");
+    @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (max--moz-device-pixel-ratio: 2) {
+        background-image: url($url + "@2x.png");
+        background-size: 800px 200px;
+    }
+}

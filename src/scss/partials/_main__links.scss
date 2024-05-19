@@ -1,0 +1,28 @@
+.main__links {
+    overflow: hidden;
+    width: 100%;
+    max-height: 0;
+    margin: 0 auto;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    opacity: 0;
+    @include transition(all, .5s, ease-out);
+}
+
+.main__links__link {
+    display: block;
+    margin-bottom: 6px;
+    
+    &:first-of-type {
+        margin-top: 12px;
+    }
+    
+    a {
+        @include transition(color, .1s, linear);
+    }
+}
+
+.main__links--visible {
+    max-height: 196px;
+    opacity: 1;
+}

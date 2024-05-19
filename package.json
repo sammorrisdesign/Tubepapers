@@ -1,0 +1,24 @@
+{
+  "name": "tubepapers",
+  "version": "1.0.0",
+  "description": "Tubepapers ==========",
+  "main": "index.js",
+  "scripts": {
+    "start": "node build.js",
+    "serve": "cd dist && npx http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sammorrisdesign/Tubepapers.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sammorrisdesign/Tubepapers/issues"
+  },
+  "homepage": "https://github.com/sammorrisdesign/Tubepapers#readme",
+  "dependencies": {
+    "fs-extra": "^11.2.0",
+    "sass": "^1.77.2"
+  }
+}

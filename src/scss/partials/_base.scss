@@ -1,0 +1,53 @@
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "p22-underground", sans-serif;
+    font-size: 62.5%;
+    -webkit-font-smoothing: antialiased;
+}
+
+html,
+body {
+    margin: 0;
+    background-color: $background;
+    min-height: 100%;
+}
+
+.container {
+    overflow: auto;
+    width: 900px;
+    padding: 0 20px;
+    margin: 0 auto;
+
+    @include mq($to: fixed) {
+        width: 100%;
+    }
+}
+
+a {
+    color: $grey;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+    transition: opacity .25s ease-in-out;
+
+    &:hover {
+        opacity: .75;
+    }
+}
+
+.preload * {
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+    -webkit-transition: none !important;
+    transition: none !important;
+    -moz-animation: none !important;
+    -ms-animation: none !important;
+    -o-animation: none !important;
+    -webkit-animation: none !important;
+    animation: none !important;
+}

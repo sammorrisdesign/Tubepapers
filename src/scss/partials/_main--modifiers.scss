@@ -1,0 +1,134 @@
+.main--bakerloo {
+    .main__title {
+        @include background-image-retina("../assets/images/bg_bakerloo");
+    }
+
+    .main__links__link a {
+        color: $bakerloo;
+
+        &:hover {
+            color: $bakerloo-hover;
+        }
+    }
+}
+
+.main--barman {
+    .main__title {
+        @include background-image-retina("../assets/images/bg_barman");
+        @include animation-delay(.2s);
+    }
+
+    .main__links__link a {
+        color: $barman;
+
+        &:hover {
+            color: $barman-hover;
+        }
+    }
+}
+
+.main--central {
+    .main__title {
+        @include background-image-retina("../assets/images/bg_central");
+        @include animation-delay(.4s);
+    }
+
+    .main__links__link a {
+        color: $central;
+
+        &:hover {
+            color: $central-hover;
+        }
+    }
+}
+
+.main--district {
+    .main__title {
+        @include background-image-retina("../assets/images/bg_district");
+        @include animation-delay(.6s);
+    }
+
+    .main__links__link a {
+        color: $district;
+
+        &:hover {
+            color: $district-hover;
+        }
+    }
+}
+
+.main--hammersmith {
+    .main__title {
+        @include background-image-retina("../assets/images/bg_hammersmith");
+        background-position: -35px -25px;
+        @include animation-delay(.8s);
+    }
+
+    .main__links__link a {
+        color: $hammersmith;
+
+        &:hover {
+            color: $hammersmith-hover;
+        }
+    }
+}
+
+.main--metropolitan {
+    .main__title {
+        @include background-image-retina("../assets/images/bg_metropolitan");
+        @include animation-delay(1s);
+    }
+
+    .main__links__link a {
+        color: $metropolitan;
+
+        &:hover {
+            color: $metropolitan-hover;
+        }
+    }
+}
+
+.main--overground {
+    .main__title {
+        @include background-image-retina("../assets/images/bg_overground");
+        @include animation-delay(1.2s);
+    }
+
+    .main__links__link a {
+        color: $overground;
+
+        &:hover {
+            color: $overground-hover;
+        }
+    }
+}
+
+.main--victoria {
+    .main__title {
+        @include background-image-retina("/assets/images/bg_victoria");
+        @include animation-delay(1.4s);
+    }
+
+    .main__links__link a {
+        color: $victoria;
+
+        &:hover {
+            color: $victoria-hover;
+        }
+    }
+}
+
+.main--waterloo {
+    .main__title {
+        @include background-image-retina("/assets/images/bg_waterloo");
+        @include animation-delay(1.6s);
+    }
+
+    .main__links__link a {
+        color: $waterloo;
+
+        &:hover {
+            color: $waterloo-hover;
+        }
+    }
+}

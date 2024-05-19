@@ -1,0 +1,42 @@
+header {
+    margin: 40px 0 60px;
+    text-align: center;
+
+    @include mq($to: mobile) {
+        margin-bottom: 20px;
+    }
+}
+
+.header__logo {
+    width: 200px;
+    height: 43px;
+    margin: 0 auto;
+    background-image: url("../assets/images/logo.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.header__logo__papers {
+    margin-left: 4px;
+    background-image: linear-gradient(to bottom, $white 50%, $white 50%);
+    background-repeat: repeat-x;
+    background-size: 2px 2px;
+    background-position: 2px 20px;
+    color: $white;
+    font-size: 2.4rem;
+    vertical-align: top;
+}
+
+.header__description {
+    width: 360px;
+    margin: 20px auto;
+    color: $muted-grey;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+
+    @include mq($to: mobile) {
+        width: 100%;
+        padding: 0 12px;
+        font-size: 1.6rem;
+    }
+}

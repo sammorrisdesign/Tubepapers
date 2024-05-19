@@ -1,0 +1,66 @@
+main {
+    margin-bottom: 80px;
+}
+
+.main__element {
+    width: 100%;
+    margin: 20px 0;
+    text-align: center;
+
+    &:hover {
+        .main__title {
+            cursor: default;
+        }
+    }
+}
+
+.main__title {
+    display: block;
+    width: 600px;
+    margin: 0 auto 12px;
+    background-repeat: no-repeat;
+    opacity: 0;
+    @include animation("main-in 1s");
+    @include transition(background-position, .5s, ease-out);
+
+    @include mq($to: tablet) {
+        width: 95%;
+        max-width: 600px;
+    }
+
+    @include mq($to: mobile) {
+        margin-bottom: 6px;
+    }
+}
+
+.finished {
+    .main__element {
+        &:hover {
+            .main__title {
+                cursor: pointer;
+
+                @include mq($from: fixed) {
+                    background-position-x: -200px;
+                    opacity: .8;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+@include keyframes(main-in) {
+    0% {
+        background-position: 600px;
+        opacity: 0;
+    }
+
+    30% {
+        background-position: 600px;
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
